@@ -38,9 +38,9 @@ var appendSeconds = document.getElementById("seconds");
 var Interval;
 
 //API
-const baseURL = 'http://85.253.26.152:9000'
+//const baseURL = 'http://85.253.26.152:9000'
 //const baseURL = 'http://192.168.1.16:9000'
-//const baseURL = 'http://localhost:9000'
+const baseURL = 'https://localhost:8000'
 const sessionEndpoint = '/api/session';
 const scoreEndpoint = '/api/score';
 
@@ -158,7 +158,8 @@ $start.addEventListener('click', e => {
     phone = document.getElementById('phone').value;
     phone = phone.replace(/\s/g, '');
     if (validatePhoneNumber(phone)) {
-        getSession(phone)
+        //getSession(phone)
+        startGame() //TEMPORARY
     } else {
         alert('Vigane telefoni number')
     }
