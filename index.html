@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dodo mälumäng</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+</head>
+
+<body>
+    <h1>Dodo Pizza mälumäng</h1>
+    <div id="board">
+        <div class="scores">
+            <span class="score">Sammud</span> <br>
+            <span id="score-count" class="score">0</span>
+        </div>
+        <div class="scores">
+            <span class="score">Leitud</span> <br>
+            <span id="score-right" class="score">0</span>
+        </div>
+        <div class="scores">
+            <span>Aeg</span> <br>
+            <p class="stopwatch"><span id="seconds">00</span>:<span id="tens">00</span></p>
+        </div>
+    </div>
+    <div id="cards"></div>
+
+    <div id="startGame">
+        <div class="modal">
+            <label for="phone">Lisa oma telefoninumber</label>
+            <input id="phone" type="text" value="+372">
+            <p id="phone-error" class="alert"></p>
+            <p><a id="start" class="button">Alusta mängu</a></p>
+        </div>
+    </div>
+
+    <div id="endGame">
+        <div class="modal">
+            <p class="congrats">Palju õnne!</p>
+            <p id="result-alert" class="alert"></p>
+            <p id="result-success" class="success" ></p>
+            <p>
+                <a id="restart" class="button">Proovi uuesti</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
