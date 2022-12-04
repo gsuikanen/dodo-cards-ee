@@ -47,7 +47,7 @@ const scoreEndpoint = '/api/score';
 $startLayer.classList.add('active');
 
 function endGame() {
-    saveResult();
+    //saveResult();
     setTimeout(() => {
         $endLayer.classList.add('active');
     }, 700);
