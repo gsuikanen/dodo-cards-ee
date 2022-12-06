@@ -38,7 +38,7 @@ var appendSeconds = document.getElementById("seconds");
 var Interval;
 
 //API
-const baseURL = 'https://agile-chamber-47950.herokuapp.com/'
+const baseURL = 'https://agile-chamber-47950.herokuapp.com'
 const sessionEndpoint = '/api/session';
 const scoreEndpoint = '/api/score';
 
