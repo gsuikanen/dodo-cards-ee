@@ -44,7 +44,7 @@ h1{
 	padding: 0.5rem;
 	margin: 0 auto 3rem;
 	max-width: 680px;
-	perspective: 1000px;
+	perspective: 600px;
 }
 .card{
 	position: relative;
@@ -81,7 +81,7 @@ h1{
 	display: grid;
 	place-items: center;
 	backface-visibility: hidden;
-	border-radius: 1rem;
+	border-radius: 0.7rem;
 }
 .card__back{
 	background: white;
@@ -152,4 +152,24 @@ label {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 480px) {
+	.card{
+		width: 80px;
+		height: 80px;
+	}
+	.card-img-front {
+		width: 70px;
+		height: 70px;
+		border-radius: 0.5rem;
+	}
+	#cards{
+		grid-template-columns: repeat(auto-fit, 80px);
+		/* gap: 1rem;
+		padding: 0.5rem;
+		margin: 0 auto 3rem;
+		max-width: 680px;
+		perspective: 600px; */
+	}
 }
