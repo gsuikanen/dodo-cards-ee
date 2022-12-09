@@ -44,15 +44,16 @@ const scoreEndpoint = '/api/score';
 
 $startLayer.classList.add('active');
 
+
 function endGame() {
     if (seconds < 120) {
         saveResult();
     } else {
-        $resultSuccess.textContent = 'Sa ei jõudnud 2 minutiga, palun proovi uuesti!'
+        $resultAlert.textContent = 'Sa ei jõudnud 2 minutiga, palun proovi uuesti!'
     }
     setTimeout(() => {
         $endLayer.classList.add('active');
-    }, 700);
+    }, 1000);
     document.body.classList.add('clip');
 }
 
@@ -68,6 +69,7 @@ function checkMatch() {
         ++countMatchs;
         $scoreOk.textContent = countMatchs;
         if (countMatchs === contentCards.length) {
+            console.log("Game ended!");
             endGame();
             clearInterval(Interval);
         }
@@ -262,6 +264,7 @@ function validateResultResponse(json) {
     } else {
         $resultAlert.textContent = translateBackendError(json.type)
     }
+    $endLayer.classList.add('active');
 }
 
 function translateBackendError(errorCode) {
