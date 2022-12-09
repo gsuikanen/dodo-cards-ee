@@ -98,6 +98,7 @@ h2 {
 }
 #endGame, #startGame{
 	position: absolute;
+  	top: 50%;
 	margin: auto;
 	inset: 0;
 	opacity: 0;
