@@ -82,6 +82,8 @@ h1{
 	place-items: center;
 	backface-visibility: hidden;
 	border-radius: 0.7rem;
+	width: 100%;
+	height: 100%;
 }
 .card__back{
 	background: white;
