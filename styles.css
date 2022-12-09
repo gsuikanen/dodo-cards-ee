@@ -25,6 +25,9 @@ h1{
 	padding-top: 4rem;
 	color: white;
 }
+h2 {
+	margin-bottom: 40px;
+}
 .scores {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -71,7 +74,7 @@ h1{
 }
 .card.match{
 	cursor: default;
-	border-color: lightgreen;
+	border-color: #FF6900;
 	user-select: none;
 }
 .card__front,
@@ -121,7 +124,6 @@ h1{
 .button{
 	display: inline-block;
 	margin-top: 1rem;
-    margin-bottom: 2rem;
 	padding: 0.5rem 2rem;
 	border:  2px solid whitesmoke;
 	border-radius: 0.5rem;
@@ -131,6 +133,8 @@ h1{
 	font-weight: bold;
 	box-shadow: 0 0 10px -2px;
 	cursor: default;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 input[type=text], select {
     width: 80%;

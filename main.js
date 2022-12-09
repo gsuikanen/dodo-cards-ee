@@ -46,14 +46,13 @@ $startLayer.classList.add('active');
 
 
 function endGame() {
+    clearInterval(Interval);
     if (seconds < 120) {
         saveResult();
     } else {
         $resultAlert.textContent = 'Sa ei jõudnud 2 minutiga, palun proovi uuesti!'
-    }
-    setTimeout(() => {
         $endLayer.classList.add('active');
-    }, 1000);
+    }
     document.body.classList.add('clip');
 }
 
@@ -71,7 +70,6 @@ function checkMatch() {
         if (countMatchs === contentCards.length) {
             console.log("Game ended!");
             endGame();
-            clearInterval(Interval);
         }
     }
     else {
@@ -174,10 +172,14 @@ $restart.addEventListener('click', e => {
 });
 
 function restartGame() {
-    startGame();
     clearTimer();
     clearInterval(Interval);
     Interval = setInterval(startTimer, 10);
+    document.body.classList.remove('clip');
+    $resultAlert.textContent = '';
+    $resultSuccess.textContent = '';
+    $phoneError.textContent = '';
+    startGame();
     startTimer();
 }
 
@@ -202,6 +204,9 @@ function startTimer() {
     }
     if (seconds > 9) {
         appendSeconds.innerHTML = seconds;
+    }
+    if (seconds > 120) {
+        endGame();
     }
 }
 
@@ -260,7 +265,7 @@ function saveResult() {
 function validateResultResponse(json) {
     console.log(json);
     if (json.type === 'OK') {
-        $resultSuccess.textContent = 'Palju õnne, SMS saadetakse 15 minuti jooksul märgitud telefoninumbrile!'
+        $resultSuccess.textContent = 'Palju õnne, SMS kingitusega saadetakse märgitud telefoninumbrile 15 minuti jooksul. Ootame sind homme taas!'
     } else {
         $resultAlert.textContent = translateBackendError(json.type)
     }
