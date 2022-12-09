@@ -160,6 +160,14 @@ label {
     margin-bottom: 2rem;
     font-size: 1.5rem;
 }
+.alert{
+	color: #FF6900;
+	font-weight: bold;
+}
+.success{
+	color: #37B34A;
+	font-weight: bold;
+}
 
 @media screen and (max-width: 480px) {
 	.card{
