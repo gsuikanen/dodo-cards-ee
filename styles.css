@@ -41,13 +41,16 @@ h2 {
 	margin-bottom: 1rem;
 }
 #cards{
-	display: grid;
+	display: none;
 	grid-template-columns: repeat(auto-fit, 120px);
 	gap: 1rem;
 	padding: 0.5rem;
 	margin: 0 auto 3rem;
 	max-width: 680px;
 	perspective: 600px;
+}
+#cards.active{
+	display: grid;
 }
 .card{
 	position: relative;
@@ -97,22 +100,26 @@ h2 {
 	transform: rotateY(180deg);
 }
 #endGame, #startGame{
-	position: absolute;
-  	top: 50%;
-	margin: auto;
 	inset: 0;
-	opacity: 0;
+	display: none;
 	pointer-events: none;
-	display: grid;
 	place-items: center;
 	transition: opacity 0.25s;
 }
+#notification {
+	top: 50%;
+	margin: auto;
+	opacity: 0;
+}
 #startGame.active {
+	display:grid;
     pointer-events: auto;
-	opacity: 1;
 }
 #endGame.active{
+	display: grid;
 	pointer-events: auto;
+}
+#notification.active {
 	opacity: 1;
 }
 .modal{

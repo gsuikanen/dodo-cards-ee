@@ -11,8 +11,10 @@ const contentCards = [
     "src/tasty-sticks.jpeg"];
 
 const $cards = document.querySelector('#cards'),
+    $notification = document.querySelector('#notification'),
     $endLayer = document.querySelector('#endGame'),
     $startLayer = document.querySelector('#startGame'),
+    $cardsLayer = document.querySelector('#cards'),
     $start = document.querySelector('#start'),
     $restart = document.querySelector('#restart'),
     $score = document.querySelector('#score-count'),
@@ -43,6 +45,8 @@ const sessionEndpoint = '/api/session';
 const scoreEndpoint = '/api/score';
 
 $startLayer.classList.add('active');
+$notification.classList.add('active');
+$cardsLayer.classList.remove('active');
 
 
 function endGame() {
@@ -52,6 +56,8 @@ function endGame() {
     } else {
         $resultAlert.textContent = 'Sa ei jõudnud 2 minutiga, palun proovi uuesti!'
         $endLayer.classList.add('active');
+        $notification.classList.add('active');
+        $cardsLayer.classList.remove('active');
     }
     document.body.classList.add('clip');
 }
@@ -146,6 +152,8 @@ function startGame() {
     $cards.innerHTML = '';
     $endLayer.classList.remove('active');
     $startLayer.classList.remove('active');
+    $notification.classList.remove('active');
+    $cardsLayer.classList.add('active');
     $score.textContent = $scoreOk.textContent = 0;
     countMatchs = wrongs = rights = 0;
     fillCards();
@@ -270,6 +278,8 @@ function validateResultResponse(json) {
         $resultAlert.textContent = translateBackendError(json.type)
     }
     $endLayer.classList.add('active');
+    $notification.classList.add('active');
+    $cardsLayer.classList.remove('active');
 }
 
 function translateBackendError(errorCode) {
