@@ -278,14 +278,3 @@ function translateBackendError(errorCode) {
             return 'Tundmatu viga, palun proovi hiljem uuesti'
     }
 }
-
-addEventListener('keypress', (event) => {});
-
-document.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        rights = 10;
-        wrongs = 5;
-        seconds = 100;
-        endGame();
-    }
-});
