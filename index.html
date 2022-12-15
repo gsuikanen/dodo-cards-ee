@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <title>Dodo mälumäng</title>
     <link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -26,35 +28,17 @@
             <p class="stopwatch"><span id="seconds">00</span>:<span id="tens">00</span></p>
         </div>
     </div>
-    <div id="cards"></div>
 
-    <div id="notification">
-        <div id="startGame">
-            <div class="modal">
-                <h2>Lisa oma telefoninumber</h2>
-                <input id="phone" type="text" value="+372">
-                <p>Sama numbriga saab mängida ainult ühe korra päevas</p>
-                <p>Kui jõuad lahendada ülesande vähem kui 120 sekundiga, saadame kingituse märgitud telefoninumbrile!</p>
-                <p id="phone-error" class="alert"></p>
-                <p><a id="start" class="button">Alusta mängu</a></p>
-                <small>Jätkates mänguga, nõustud 
-                    <a href="https://docs.google.com/document/d/1hlC2ojCoxX3Tgd_TrIl7zbwhSbvuD5GiJ_biVwqV5x4/edit" target="_blank">tingimustega</a>
-                </small>
-            </div>
-        </div>
-    
-        <div id="endGame">
-            <div class="modal">
-                <h2>Mäng on läbi!</h2>
-                <p id="result-alert" class="alert"></p>
-                <p id="result-success" class="success"></p>
-                <p><a id="restart" class="button">Proovi uuesti</a></p>
-            </div>
-        </div>
+    <div id="thankyou">
+        <p class="thankyou-text">Selleks korraks on Dodo mälumäng läbi. Aitäh kõigile, kes mängisid!</p>
+        <p class="thankyou-text">Selleks, et saada esimesena teada järgmistest mängudest, veendu, et sa jälgid meid sotsiaalmeedias!</p>
+        <p class="social">
+            <a href="https://www.facebook.com/DodoPizzaEesti" class="fa fa-facebook-f"></a>
+            <a href="https://www.instagram.com/dodopizza.ee" class="fa fa-instagram"></a>
+        </p>
+
     </div>
-    
-</body>
 
-<script src="main.js"></script>
+</body>
 
 </html>
